@@ -41,9 +41,11 @@
         background-position: center center;
         background-size: contain;
 
-        &:hover
+        &,
+        &:hover,
+        &:focus
         {
-            transform: scale(0.8);
+            transform: scale(1) !important;
         }
 
         img
@@ -187,6 +189,11 @@
             width: calc(calc(100% - 30px) / 3);
             height: 100%;
             margin: 0;
+
+            &:hover
+            {
+                transform: scale(0.8);
+            }
         }
     }
 }
