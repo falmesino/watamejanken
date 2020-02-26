@@ -32,6 +32,11 @@
         margin: 0 auto;
         padding: 30px;
         // border: solid 1px blue;
+
+        @media (min-width: 992px)
+        {
+            padding-bottom: 72px;
+        }
     }
 
     &__title
@@ -73,7 +78,6 @@
     {
         background-image: url('../img/bg-0.jpg');
         background-position: center center;
-        background-attachment: fixed;
         background-size: contain;
         background-repeat: no-repeat;
     }
