@@ -9,6 +9,21 @@ html, body
     background-color: #000;
     overflow: hidden;
 }
+a
+button,
+input,
+textarea,
+a:focus,
+button:focus,
+input:focus,
+textarea:focus
+a:active,
+button:active
+{
+    outline: none;
+    outline-style: none;
+    -moz-outline-style: none;
+}
 
 .hidden,
 .d-none
