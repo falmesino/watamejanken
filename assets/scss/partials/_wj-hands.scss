@@ -154,12 +154,12 @@
         width: 50%;
         max-width: 50%;
         min-width: 50%;
-        min-height: 0;
-        max-height: 30vh;
-        height: 30vh;
+        min-height: 72px;
+        max-height: 100vh;
+        height: 72px;
         left: 0;
         margin: 0 auto;
-        padding: 0 30px;
+        padding: 0 30px 30px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -168,8 +168,12 @@
 
         .wj-hands__item
         {
+            flex-grow: 0;
+            min-width: calc(calc(100% - 30px) / 3);
+            min-width: calc(calc(100% - 30px) / 3);
+            width: calc(calc(100% - 30px) / 3);
             height: 100%;
-            margin: 0 15px;
+            margin: 0;
         }
     }
 }
