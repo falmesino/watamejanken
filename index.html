@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="@falmesino" />
+        <title>Tsunomaki Janken | つのまきじゃんけん</title>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.css" />
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.polyfilled.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+
+    </head>
+    <body>
+        
+        <div class="main">
+
+            <div class="wj-scene wj-scene--intro active">
+                <div class="wj-scene__buttons">
+                    <button type="button" id="btnPlay" class="wj-button wj-button--primary">
+                        Play
+                    </button>
+                </div><!--/ .wj-scene__buttons -->
+            </div><!--/ .wj-scene -->
+
+            <div class="wj-scene wj-scene--main">
+                
+                <div class="wj-video">
+                    <div id="videoPlayer" data-plyr-provider="youtube" data-plyr-embed-id="yws1hD-ENzQ"></div>
+                    <!--
+                    <video width="100%" height="100%" id="videoPlayer">
+                        <source src="./assets/video/watame.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                    -->
+                </div><!--/ .wj-video -->
+
+                <div class="wj-hands wj-hands--watame">
+                    <img id="watameRock" class="" src="./assets/img/hand-rock.png" alt="Rock" title="Rock">
+                    <img id="watamePaper" class="" src="./assets/img/hand-paper.png" alt="Paper" title="Paper">
+                    <img id="watameScissor" class="" src="./assets/img/hand-scissor.png" alt="Scissor" title="Scissor">
+                </div><!--/ .wj-hands -->
+
+                <div class="wj-hands wj-hands--player">
+                    <button type="button" class="wj-hands__item wj-hands__item--rock" id="btnHandRock">Rock</button>
+                    <button type="button" class="wj-hands__item wj-hands__item--paper" id="btnHandPaper">Paper</button>
+                    <button type="button" class="wj-hands__item wj-hands__item--scissor" id="btnHandScissor">Scissor</button>
+                </div><!--/ .wj-hands -->
+
+                <div class="wj-scene__buttons">
+                    <button type="button" id="btnReplay" class="wj-button wj-button--primary d-none">
+                        Play Again?
+                    </button>
+                </div><!--/ .wj-scene__buttons -->
+
+                <!--
+                <div class="wj-scene__buttons d-none">
+                    <button type="button" id="btnTimer" class="wj-button wj-button--primary">
+                        Timer
+                    </button>
+                    <button type="button" id="btnReset" class="wj-button wj-button--primary">
+                        Reset
+                    </button>
+                    <button type="button" id="btnPlayTest" class="wj-button wj-button--primary">
+                        Play
+                    </button>
+                </div><!--/ .wj-scene__buttons -->
+
+            </div><!--/ .wj-scene -->
+
+        </div><!--/ .main -->
+
+    </body>
+</html>
