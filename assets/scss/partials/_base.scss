@@ -8,6 +8,8 @@ html, body
 
     background-color: #00325b;
     overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body
@@ -71,4 +73,37 @@ button:active
         right: 0;
         bottom: 0;
     }
+}
+
+.loading
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00325b;
+    color: #ffb300;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 10;
+
+    pointer-events: none;
+
+    & > span
+    {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
 }
