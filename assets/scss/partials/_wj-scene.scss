@@ -1,0 +1,87 @@
+
+.wj-scene
+{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    border: none; //solid 1px red;
+
+    &.active
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__buttons
+    {
+        width: 50%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        // border: solid 1px blue;
+    }
+
+    &__title
+    {
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        // border: solid 1px red;
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        color: white;
+
+        h1, h2, h3, h4, h5, h6, p
+        {
+            margin: 0 auto;
+            padding: 0;
+
+            font-size: 72px;
+            font-weight: bold;
+
+            & > span
+            {
+                display: block;
+                position: relative;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+    }
+
+    &--intro
+    {
+        background-image: url('../img/bg-0.jpg');
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: contain;
+    }
+
+    &--main
+    {
+        &.active
+        {
+            // display: block;
+        }
+    }
+}

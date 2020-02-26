@@ -23,14 +23,14 @@ $(function(){
 });
 
 function resetChoice() {
-    $('.wj-hands--player').stop().removeClass('ready').removeClass('locked');
+    $('.wj-hands--player').stop().removeClass('ready').removeClass('locked').addClass('wj-hands--bottom');
     $('.wj-hands--player .wj-hands__item.selected').stop().removeClass('selected');
     $('.wj-hands--watame img.active').stop().removeClass('active');
-    $('#btnReplay').stop().addClass('d-none');
+    $('#btnReplay').parent().stop().addClass('d-none');
 }
 
 function lockChoice(target) {
-    $('.wj-hands--player').stop().addClass('locked');
+    $('.wj-hands--player').stop().addClass('locked').removeClass('wj-hands--bottom');
     $('.wj-hands--player .wj-hands__item.selected').stop().removeClass('selected');
     target.stop().addClass('selected');
 }
@@ -48,6 +48,19 @@ function getWatameHand() {
 }
 
 function gameScreen() {
+
+    var docElm = document.documentElement;
+    /*
+    if (docElm.requestFullscreen) {
+      docElm.requestFullscreen();
+    } else if (docElm.msRequestFullscreen) {
+      docElm.msRequestFullscreen();
+    } else if (docElm.mozRequestFullScreen) {
+      docElm.mozRequestFullScreen();
+    } else if (docElm.webkitRequestFullScreen) {
+      docElm.webkitRequestFullScreen();
+    }
+    */
 
     resetChoice();
 
@@ -163,7 +176,7 @@ function gameScreen() {
         if(currentTime >= endTime) {
             videoPlayer.stop();
 
-            $('#btnReplay.d-none').stop().fadeIn('fast', function(){
+            $('#btnReplay').parent().stop().fadeIn('fast', function(){
                 $(this).stop().removeClass('d-none');
             });
         }
