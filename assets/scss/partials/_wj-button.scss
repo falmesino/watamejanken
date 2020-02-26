@@ -1,5 +1,8 @@
 .wj-button
 {
+
+    @include transition(0.3s, ease);
+
     display: block;
     position: relative;
     margin: 0 15px;
@@ -17,6 +20,13 @@
     font-weight: bold;
 
     width: 100%;
+
+    &:hover,
+    &:focus
+    {
+        background-color: darken(#ffb300, 10%);
+        transform: scale(0.98);
+    }
 
     &--primary
     {

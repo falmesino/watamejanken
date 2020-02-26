@@ -1,0 +1,8 @@
+@mixin transition($duration, $effect) {
+    // ease | linear | ease-in | ease-out | ease-in-out
+    -webkit-transition: $duration $effect;
+    -moz-transition: $duration $effect;
+    -ms-transition: $duration $effect;
+    -o-transition: $duration $effect;
+    transition: $duration $effect;
+}

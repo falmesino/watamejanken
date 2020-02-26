@@ -18,6 +18,8 @@
     &__item
     {
 
+        @include transition(0.3s, ease);
+
         flex-grow: 1;
 
         display: block;
@@ -38,6 +40,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
+
+        &:hover,
+        &:focus
+        {
+            transform: scale(0.8);
+        }
 
         img
         {
