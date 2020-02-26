@@ -27,7 +27,7 @@ $(function(){
     .done( function( instance ) {
         console.log('all images successfully loaded');
         $('.loading').stop().fadeOut('fast', function(){
-            
+
         });
     })
     .fail( function() {
@@ -192,11 +192,13 @@ function gameScreen() {
         }
 
         if(currentTime >= endTime) {
-            videoPlayer.stop();
-
+            
             $('#btnReplay').parent().stop().fadeIn('fast', function(){
                 $(this).stop().removeClass('d-none');
             });
+
+            videoPlayer.stop();
+
         }
 
     });
