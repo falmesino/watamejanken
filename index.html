@@ -58,6 +58,13 @@
         <div class="main" id="#main">
 
             <div class="wj-scene wj-scene--intro active">
+
+                <div class="wj-about">
+                    <a href="#" class="btn-about">
+                        ?
+                    </a>
+                </div><!--/ .wj-about -->
+
                 <div class="wj-scene__buttons">
                     <button type="button" id="btnPlay" class="wj-button wj-button--primary">
                         Play
@@ -66,6 +73,12 @@
             </div><!--/ .wj-scene -->
 
             <div class="wj-scene wj-scene--main">
+
+                <div class="wj-about">
+                    <a href="#" class="btn-about">
+                        ?
+                    </a>
+                </div><!--/ .wj-about -->
                 
                 <div class="wj-video">
                     <div id="videoPlayer" data-plyr-provider="youtube" data-plyr-embed-id="yws1hD-ENzQ"></div>
@@ -111,6 +124,38 @@
             </div><!--/ .wj-scene -->
 
         </div><!--/ .main -->
+
+        <div class="wj-overlay">
+            <div class="wj-overlay__title">
+                <h2>About</h2>
+            </div><!--/ .wj-overlay__title -->
+            <div class="wj-overlay__body">
+                <div class="wj-overlay__body__inner">
+
+                    <p>
+                        <strong>Tsunomaki Janken</strong> &mdash; <small>2020.03.04</small><br />
+                        Created by @falmesino<br /><br />
+                        I made this for fun and i hope you also having fun playing it.<br />
+                        Hit me up on twitter (@falmesino) if you find a bug or have some suggestion.<br />
+                        Thanks!
+                    </p>
+
+                    <p>
+                        <strong>Update Log</strong>
+                    </p>
+
+                    <ul>
+                        <li>2020.03.04 &mdash; A Reddit user found that you will always win when you choose 'Rock', I have fixed it and your winning career has just been canceled.</li>
+                    </ul>
+
+                </div><!--/ .wj-overlay__body__inner -->
+            </div><!--/ .wj-overlay__body -->
+            <div class="wj-overlay__footer">
+                <a href="#" id="btnAboutClose">
+                    <span>Close</span>
+                </a>
+            </div><!--/ .wj-overlay__footer -->
+        </div><!--/ .wj-overlay -->
 
     </body>
 </html>

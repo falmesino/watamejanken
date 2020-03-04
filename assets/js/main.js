@@ -5,37 +5,50 @@
 
 var userHand = '';
 var watameHand = '';
+var watameRandom = '';
 var score = 0;
 var winStreak = 0;
 var loseStreak = 0;
 
 $(function(){
 
-    console.log('Document is ready, my Lord.');
+    // console.log('Document is ready, my Lord.');
 
     $(document).on('click', '#btnPlay', function(e){
         e.preventDefault();
-        console.log('Play button has been clicked!');
+        // console.log('Play button has been clicked!');
         gameScreen();
         return false;
     });
 
     $('#main').imagesLoaded()
     .always( function( instance ) {
-        console.log('all images loaded');
+        // console.log('all images loaded');
     })
     .done( function( instance ) {
-        console.log('all images successfully loaded');
+        // console.log('all images successfully loaded');
         $('.loading').stop().fadeOut('fast', function(){
 
         });
     })
     .fail( function() {
-        console.log('all images loaded, at least one is broken');
+        // console.log('all images loaded, at least one is broken');
     })
     .progress( function( instance, image ) {
         var result = image.isLoaded ? 'loaded' : 'broken';
-        console.log( 'image is ' + result + ' for ' + image.img.src );
+        // console.log( 'image is ' + result + ' for ' + image.img.src );
+    });
+
+    $(document).on('click', '.btn-about', function(e){
+        e.preventDefault();
+        $('.wj-overlay').stop().addClass('active');
+        return false;
+    });
+
+    $(document).on('click', '#btnAboutClose', function(e){
+        e.preventDefault();
+        $('.wj-overlay').stop().removeClass('active');
+        return false;
     });
 
 });
@@ -51,11 +64,13 @@ function lockChoice(target) {
     $('.wj-hands--player').stop().addClass('locked').removeClass('wj-hands--bottom');
     $('.wj-hands--player .wj-hands__item.selected').stop().removeClass('selected');
     target.stop().addClass('selected');
+    $('.wj-about').hide();
 }
 
 function ctaScreen() {
     $('.wj-scene.active').stop().removeClass('active');
     $('.wj-scene--cta').stop().addClass('active');
+    $('.wj-about').show();
 }
 
 function getWatameHand() {
@@ -85,7 +100,7 @@ function gameScreen() {
     $('.wj-scene.active').stop().removeClass('active');
     $('.wj-scene--main').stop().addClass('active');
 
-    let watameRandom = getWatameHand();
+    watameRandom = getWatameHand();
 
     var videoPlayer = new Plyr('#videoPlayer', {
         debug: false,
@@ -120,6 +135,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'rock';
+        watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });
@@ -128,6 +144,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'paper';
+        watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });
@@ -136,6 +153,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'scissor';
+        watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });

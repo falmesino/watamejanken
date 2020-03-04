@@ -1,0 +1,216 @@
+.wj-overlay
+{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 21;
+    background-color: #212121;
+
+    @include transition(0.3s, ease);
+
+    opacity: 0;
+    pointer-events: none;
+
+    &.active
+    {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__title,
+    &__body,
+    &__footer
+    {
+        position: relative;
+        border: none; //solid 1px red;
+
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+
+    }
+
+    &__title,
+    &__footer
+    {
+        background-color: #00325b;
+        color: white;
+        padding: 30px 0;
+        margin: 0 auto;
+        text-align: center;
+
+        a
+        {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &:focus
+            {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        @media (max-width: 479px)
+        {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__title
+    {
+        h1, h2, h3, h4, h5, h6, p
+        {
+            margin: 0 auto;
+            padding: 0;
+            font-weight: 700;
+            font-size: x-large;
+            text-transform: uppercase;
+
+            color: #ffb300;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__footer
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        a
+        {
+            @include transition(0.3s, ease);
+
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            padding: 30px;
+
+            color: inherit;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:hover,
+            &:focus
+            {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover
+            {
+                color: #ffb300;
+            }
+        }
+    }
+
+    &__body
+    {
+        flex-grow: 1;
+        background-color: #eee;
+
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &__inner
+        {
+            padding: 30px;
+
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.8rem;
+
+            max-width: 80%;
+            margin: 0 auto; 
+
+            strong
+            {
+                font-weight: bold;
+            }
+
+            small
+            {
+                font-size: smaller;
+            }
+
+            p,
+            ul,
+            ol
+            {
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+}
+
+
+
+.wj-about
+{
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    right: auto;
+    top: auto;
+    z-index: 20;
+
+    width: 48px;
+    height: 48px;
+    border: none; //solid 1px red;
+    overflow: hidden;
+
+    a
+    {
+
+        @include transition(0.3s, ease);
+
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: inherit;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 48px;
+        border: none;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        color: #212121;
+
+        opacity: 0.8;
+
+        &:hover,
+        &:focus
+        {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:hover
+        {
+            opacity: 1;
+        }
+    }
+
+}
