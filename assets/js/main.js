@@ -179,6 +179,7 @@ function gameScreen() {
         e.preventDefault();
         resetChoice();
         $('.wj-hands--player').stop().addClass('ready');
+        $('.wj-about').show();
         watameRandom = getWatameHand();
         videoPlayer.stop();
         return false;

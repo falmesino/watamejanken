@@ -164,16 +164,28 @@
 {
     display: block;
     position: absolute;
-    bottom: 30px;
+    /*
+    bottom: calc(30px + 12px);
     left: 15px;
-    right: auto;
-    top: auto;
+    */
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
     z-index: 20;
 
     width: 48px;
     height: 48px;
     border: none; //solid 1px red;
     overflow: hidden;
+
+    &--static
+    {
+        top: auto;
+        right: auto;
+        left: 0;
+        bottom: 0;
+        transform: none;
+    }
 
     a
     {
@@ -191,14 +203,23 @@
         text-transform: uppercase;
         color: inherit;
         font-weight: bold;
-        font-size: x-large;
-        line-height: 48px;
+        font-size: 1rem;
+        line-height: 56px;
         border: none;
-        border-radius: 100%;
+        border-radius: 0 100% 0 0;
         background-color: rgba(255, 255, 255, 1);
         color: #212121;
 
         opacity: 0.8;
+
+        & > span
+        {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+        }
 
         &:hover,
         &:focus
