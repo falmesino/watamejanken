@@ -75,8 +75,11 @@ function ctaScreen() {
 
 function getWatameHand() {
     let watameHands = ['Rock', 'Paper', 'Scissor'];
-    let output = watameHands[Math.floor(Math.random() * watameHands.length)];
-    // console.log('Watame choose : ' + output);
+    let randomInt = Math.floor(Math.random() * watameHands.length);
+    console.log(randomInt);
+    console.table(watameHands);
+    let output = watameHands[randomInt];
+    console.log('Watame choose : ' + output);
     return output;
 }
 
@@ -135,7 +138,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'rock';
-        watameRandom = getWatameHand();
+        // watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });
@@ -144,7 +147,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'paper';
-        watameRandom = getWatameHand();
+        // watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });
@@ -153,7 +156,7 @@ function gameScreen() {
         e.preventDefault();
         lockChoice($(this));
         userHand = 'scissor';
-        watameRandom = getWatameHand();
+        // watameRandom = getWatameHand();
         videoPlayer.play();
         return false;
     });
@@ -182,12 +185,6 @@ function gameScreen() {
         $('.wj-about').show();
         watameRandom = getWatameHand();
         videoPlayer.stop();
-        return false;
-    });
-
-    $(document).on('click', '#btnPlayTest', function(e){
-        e.preventDefault();
-        videoPlayer.play();
         return false;
     });
 
